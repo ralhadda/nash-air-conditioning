@@ -391,6 +391,8 @@ a {
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 40px 55px;
 }
 
@@ -419,22 +421,6 @@ a {
   color: black;
 }
 
-/* Footer links */
-
-.footer-distributed .footer-links {
-  color: black;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  font-weight: 400;
-  text-decoration: none;
-  color: inherit;
-}
-
 .footer-distributed .footer-company-name {
   color: #222;
   font-size: 14px;
@@ -442,11 +428,9 @@ a {
   margin: 0;
 }
 
-/* Footer Center */
-
-.footer-distributed .footer-center {
+/* .footer-distributed .footer-center {
   width: 35%;
-}
+} */
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
@@ -459,11 +443,6 @@ a {
   line-height: 42px;
   margin: 10px 15px;
   vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
 }
 
 .footer-distributed .footer-center p {
@@ -486,25 +465,9 @@ a {
   text-decoration: none;
 }
 
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight: 300;
-  font-size: 20px;
-  left: 0;
-  color: black;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-/* Footer Right */
-
-.footer-distributed .footer-right {
+/* .footer-distributed .footer-right {
   width: 20%;
-}
+} */
 
 .footer-distributed .footer-company-about {
   line-height: 20px;
@@ -522,23 +485,28 @@ a {
   margin-bottom: 20px;
 }
 
-.footer-distributed .footer-icons {
-  margin-top: 25px;
-}
+@media (max-width: 700px) {
+  .footer-distributed {
+    grid-template-columns: 1fr; /* Single column layout */
+    text-align: center; /* Center text alignment for smaller screens */
+  }
 
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    width: 100%; /* Make each section take up the full width of the page */
+    margin-bottom: 20px; /* Space between stacked sections */
+  }
 
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  line-height: 35px;
+  .footer-distributed .footer-left {
+    /* Additional styling for footer-left, if needed */
+  }
 
-  margin-right: 3px;
-  margin-bottom: 5px;
+  .footer-distributed .footer-center {
+    /* Additional styling for footer-center, if needed */
+  }
+
+  .footer-distributed .footer-right {
+    /* Additional styling for footer-right, if needed */
+  }
 }
