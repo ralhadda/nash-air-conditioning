@@ -543,7 +543,7 @@ a {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
   gap: 10px;
 }
 
@@ -572,7 +572,7 @@ a {
 }
 
 .regions-list ul {
-  columns: 2; /* Wrap into 2 columns */
+  columns: 3; /* Wrap into 2 columns */
   column-gap: 20px;
   list-style-type: none;
   padding-left: 10px;
@@ -596,6 +596,6 @@ a {
   }
 
   .regions-list ul {
-    columns: 2;
+    columns: 3;
   }
 }
