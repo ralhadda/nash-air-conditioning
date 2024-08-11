@@ -510,3 +510,92 @@ a {
     /* Additional styling for footer-right, if needed */
   }
 }
+.map-and-regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.google-map {
+  flex: 1 1 50%;
+  position: relative;
+  padding-bottom: 50%; /* Maintain aspect ratio */
+  height: 0;
+}
+
+.google-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.regions {
+  flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.regions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.map-and-regions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.google-map {
+  flex: 1 1 60%;
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.regions-list {
+  flex: 1 1 35%;
+}
+
+.regions-list ul {
+  columns: 2; /* Wrap into 2 columns */
+  column-gap: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  color: black;
+}
+
+.regions-list ul li {
+  break-inside: avoid;
+  padding: 5px 0;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 700px) {
+  .map-and-regions {
+    flex-direction: column;
+  }
+
+  .google-map,
+  .regions-list {
+    flex: 1 1 100%;
+  }
+
+  .regions-list ul {
+    columns: 2;
+  }
+}
