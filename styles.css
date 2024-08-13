@@ -577,7 +577,7 @@ a {
 }
 
 .regions-list ul {
-  columns: 3; /* Wrap into 2 columns */
+  columns: 2; /* Wrap into 2 columns */
   column-gap: 20px;
   list-style-type: none;
   padding-left: 10px;
@@ -590,7 +590,7 @@ a {
 }
 
 /* Media Query for Mobile */
-@media (max-width: 700px) {
+@media (max-width: 1300px) {
   .map-and-regions {
     flex-direction: column;
   }
