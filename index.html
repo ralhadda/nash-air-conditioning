@@ -16,9 +16,31 @@
         <span id="top-header">NHAC</span>
         <!-- <img class="logo" src="img/.png" alt="Web Dev Simplified Logo"> -->
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Residential Services</a></li>
-          <li><a href="#services">Commerical Services</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Home</a>
+            <ul class="dropdown-menu">
+              <li><a href="#about-me">About Us</a></li>
+              <li><a href="#services">Our Services</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#services" class="dropdown-toggle"><span>Residential</span> <span>Services</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="home-improvements.html">Home Improvements</a></li>
+              <li><a href="maintenance.html">Maintenance</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="repair.html">Repair</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#services" class="dropdown-toggle"><span>Commercial</span> <span>Services</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="home-improvements.html">Commercial HVAC Installation</a></li>
+              <li><a href="maintenance.html">Commercial Maintenance</a></li>
+              <li><a href="services.html">Commercial Services</a></li>
+              <li><a href="repair.html">Commercial Repair</a></li>
+            </ul>
+          </li>
           <li><a class="btn" href="#footer-section">Contact</a></li>
         </ul>
       </nav>
