@@ -56,11 +56,28 @@
       <section id="content" class="section">
         <h2 class="section-title">Home Improvements</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-          <img
-            src="img/residential-hvac.jpeg"
-            alt="Home Improvements"
-            style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 2rem;"
-          />
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="img/residential-hvac.jpeg" alt="Home Improvements - Residential HVAC">
+              </div>
+              <div class="carousel-slide">
+                <img src="img/residential-hvac.jpeg" alt="Home Improvements - Heat Pump Installation">
+              </div>
+              <div class="carousel-slide">
+                <img src="img/residential-hvac.jpeg" alt="Home Improvements - Mini Split System">
+              </div>
+              <div class="carousel-slide">
+                <img src="img/residential-hvac.jpeg" alt="Home Improvements - Central AC System">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <span class="carousel-dot active" data-slide="0"></span>
+            <span class="carousel-dot" data-slide="1"></span>
+            <span class="carousel-dot" data-slide="2"></span>
+            <span class="carousel-dot" data-slide="3"></span>
+          </div>
           <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
             At Nash Heating & Air Conditioning, we specialize in comprehensive home improvement services for your HVAC systems. Whether you're upgrading your existing system or installing a brand new one, our expert technicians are here to help.
           </p>
@@ -148,5 +165,6 @@
         </p>
       </div>
     </footer>
+    <script src="carousel.js"></script>
   </body>
 </html>
