@@ -129,6 +129,7 @@ body {
 
 .sub-title {
   font-size: 1.5rem;
+  font-weight: normal;
   margin-top: 0.3rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -136,6 +137,11 @@ body {
   margin-right: auto;
   animation: sub-title-enter var(--sub-title-duration) var(--sub-title-delay)
     backwards;
+}
+
+h1.sub-title {
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 .btn {
