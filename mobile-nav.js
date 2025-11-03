@@ -12,12 +12,17 @@ if (navToggle && navList) {
   // Mobile dropdown toggle
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.dropdown-toggle');
-    toggle.addEventListener('click', function(e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdown.classList.toggle('active');
-      }
-    });
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          // Simply toggle the dropdown without closing others
+          dropdown.classList.toggle('active');
+          console.log('Dropdown toggled:', dropdown.classList.contains('active'));
+        }
+      });
+    }
   });
 
   // Close mobile menu when clicking a link

@@ -62,18 +62,29 @@
       <section id="content" class="section">
         <h2 class="section-title">Get a Quote</h2>
         <div style="max-width: 600px; margin: 0 auto;">
-          <form class="form">
+          <form class="form" id="quoteForm">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required />
 
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required placeholder="Enter information about your quote request (e.g., type of service needed, property details, preferred appointment time, etc.)" style="resize: none; height: 150px;"></textarea>
 
             <div class="btn-container" style="text-align: center;">
               <button type="submit" class="btn btn-square">Request a Quote</button>
+            </div>
+
+            <div style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #666;">
+              <p>By submitting this form, you agree to our
+                <a href="privacy-policy.html" style="color: var(--primary-red); text-decoration: underline;">Privacy Policy</a>
+                and
+                <a href="terms-and-conditions.html" style="color: var(--primary-red); text-decoration: underline;">Terms & Conditions</a>.
+              </p>
             </div>
           </form>
 
@@ -111,5 +122,7 @@
     </footer>
     <script src="mobile-nav.js"></script>
     <script src="contact-animation.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="quote-form.js"></script>
   </body>
 </html>
