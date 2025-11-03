@@ -963,6 +963,7 @@ a {
     padding: 1rem 1.5rem;
     font-weight: 500;
     box-shadow: none;
+    white-space: nowrap;
   }
 
   .nav-list .btn:hover {
@@ -1504,18 +1505,17 @@ a {
 }
 
 /* Contact Page Logo Animation */
-.contact-logo-spin.animate {
-  animation: logo-spin 2s ease-in-out;
+.contact-logo-spin {
+  animation: logo-float 3s ease-in-out infinite;
 }
 
-@keyframes logo-spin {
-  0% {
-    transform: rotateY(0deg) scale(1);
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.3));
   }
   50% {
-    transform: rotateY(180deg) scale(1.1);
-  }
-  100% {
-    transform: rotateY(360deg) scale(1);
+    transform: translateY(-15px);
+    filter: drop-shadow(0 0 20px rgba(230, 57, 70, 0.6));
   }
 }
