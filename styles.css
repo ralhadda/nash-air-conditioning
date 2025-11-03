@@ -112,6 +112,36 @@ body {
   color: var(--primary-red);
 }
 
+/* Mobile Menu Toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--black);
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 .dropdown {
   position: relative;
 }
@@ -503,7 +533,157 @@ a {
   }
 }
 
-@media (max-width: 700px) {
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .sub-title {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(2, minmax(auto, 400px));
+    column-gap: 30px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 0 20px 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-list > li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-list .btn {
+    margin: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    color: var(--black);
+    border: none;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    box-shadow: none;
+  }
+
+  .nav-list .btn:hover {
+    background-color: transparent;
+    color: var(--primary-red);
+    transform: none;
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-toggle::after {
+    content: '▼';
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown.active .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .sub-title {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
   .curriculum-grid {
     grid-template-columns: minmax(auto, 100%);
     row-gap: 20px;
@@ -548,20 +728,48 @@ a {
     font-size: 0.85rem;
   }
 
-  .dropdown-toggle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    line-height: 1;
+  .btn-grow {
+    font-size: 1rem;
+    padding: 0.6em 1.8em;
   }
 
-  .dropdown-toggle span {
-    display: block;
+  .scroll-down-icon {
+    width: 25px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 35px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 2rem 0.75rem;
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .plan-name {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    width: 80%;
   }
 }
 
