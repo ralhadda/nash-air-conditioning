@@ -84,6 +84,32 @@ body {
   transform: scale(1.05);
 }
 
+.nav-phone-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-red);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 200ms ease;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.nav-phone-number:hover {
+  background-color: var(--dark-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.nav-phone-number i {
+  font-size: 1.1rem;
+}
+
 .logo {
   width: 50px;
 }
@@ -483,6 +509,135 @@ a {
   box-shadow: 0 2px 5px 1px black;
 }
 
+/* Hero CTA Buttons */
+.hero-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  animation: btn-grow-enter var(--btn-grow-duration) var(--btn-grow-delay) backwards;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
+}
+
+.btn-secondary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+/* Trust Indicators Section */
+.trust-section {
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+  padding: 3rem 2rem;
+}
+
+.trust-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trust-stat {
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 300ms ease;
+}
+
+.trust-stat:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.trust-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.trust-label {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Why Choose Us Section */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-choose-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 300ms ease;
+}
+
+.why-choose-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.why-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 300ms ease;
+}
+
+.why-choose-item:hover .why-icon {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.why-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.why-choose-item h3 {
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.why-choose-item p {
+  color: var(--dark-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
 @keyframes scroll-down-bounce {
   from {
     transform: translateY(0);
@@ -539,6 +694,12 @@ a {
     padding: 0.75rem 1rem;
   }
 
+  .nav-phone-number {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+  }
+
   .title {
     font-size: 2.5rem;
   }
@@ -560,6 +721,16 @@ a {
     grid-template-columns: repeat(2, minmax(auto, 400px));
     column-gap: 30px;
   }
+
+  .trust-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 /* Mobile Styles */
@@ -568,8 +739,46 @@ a {
     padding: 0.5rem 1rem;
   }
 
+  .nav-phone-number {
+    display: none;
+  }
+
   .nav-toggle {
     display: flex;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .trust-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trust-stat {
+    padding: 1.25rem;
+  }
+
+  .trust-number {
+    font-size: 2rem;
+  }
+
+  .trust-label {
+    font-size: 0.9rem;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .nav-list {
