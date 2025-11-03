@@ -1054,6 +1054,7 @@ a {
 
   .full-screen-header {
     background-position-x: 65%;
+    background-attachment: scroll; /* Fix mobile parallax issue */
   }
 
   .services-container {
