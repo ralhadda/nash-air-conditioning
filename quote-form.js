@@ -31,9 +31,8 @@ document.getElementById('quoteForm').addEventListener('submit', function(event) 
   };
 
   // Send email using EmailJS
-  // Note: You'll need to create a service and template in EmailJS dashboard
-  // For now, using the default service and template IDs
-  emailjs.send('service_id', 'template_id', templateParams)
+  // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values from EmailJS dashboard
+  emailjs.send('service_jl0dgii', 'template_8ug5qar', templateParams)
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
 
