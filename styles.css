@@ -39,7 +39,6 @@ body {
   background-size: cover;
   background-position-x: 40%;
   background-position-y: center;
-  background-attachment: fixed;
 
   display: flex;
   flex-direction: column;
@@ -49,22 +48,6 @@ body {
   color: white;
   position: relative;
   overflow: hidden;
-}
-
-.full-screen-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(67, 97, 168, 0.15) 100%);
-  z-index: 0;
-}
-
-.full-screen-header > * {
-  position: relative;
-  z-index: 1;
 }
 
 .nav {
@@ -1054,7 +1037,6 @@ a {
 
   .full-screen-header {
     background-position-x: 65%;
-    background-attachment: scroll; /* Fix mobile parallax issue */
   }
 
   .services-container {
