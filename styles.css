@@ -34,7 +34,8 @@ body {
 }
 
 .full-screen-header {
-  height: 100vh;
+  height: 75vh;
+  max-height: 800px;
   background-image: url("img/heating4.webp");
   background-size: cover;
   background-position-x: 40%;
@@ -1334,6 +1335,21 @@ a {
   .footer-section .footer-center > div {
     justify-content: center;
   }
+
+  /* Reduce hero height on tablets */
+  .full-screen-header {
+    height: 70vh !important;
+    min-height: 500px !important;
+    max-height: 700px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .sub-title {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1354,6 +1370,22 @@ a {
   .footer-section .footer-company-about,
   .footer-section .footer-center p {
     font-size: 13px;
+  }
+
+  /* Reduce hero height on mobile so users know there's more content below */
+  .full-screen-header {
+    height: 60vh !important;
+    min-height: 450px !important;
+    max-height: 600px;
+  }
+
+  .sub-title {
+    font-size: 1.3rem;
+  }
+
+  .scroll-down-icon {
+    bottom: 1.5rem;
+    width: 35px;
   }
 }
 .map-and-regions {
@@ -1517,5 +1549,88 @@ a {
   50% {
     transform: translateY(-15px);
     filter: drop-shadow(0 0 20px rgba(230, 57, 70, 0.6));
+  }
+}
+
+/* Review Action Buttons */
+.review-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+  flex-wrap: wrap;
+}
+
+.review-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 250px;
+}
+
+.review-action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.review-action-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-action-btn i {
+  font-size: 24px;
+}
+
+/* Google Button Styling */
+.google-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #0056b3 100%);
+}
+
+.google-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+}
+
+/* Yelp Button Styling */
+.yelp-btn {
+  background: linear-gradient(135deg, #d32323 0%, #a01919 100%);
+}
+
+.yelp-btn:hover {
+  background: linear-gradient(135deg, #a01919 0%, #7a1313 100%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .review-buttons-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .review-action-btn {
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  .review-action-btn i {
+    font-size: 20px;
   }
 }
