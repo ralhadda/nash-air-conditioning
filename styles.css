@@ -501,19 +501,19 @@ h1.sub-title {
 
 /* Service-specific colors */
 .project-card:nth-child(1) {
-  background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+  background: var(--primary-red);
 }
 
 .project-card:nth-child(2) {
-  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+  background: var(--primary-red);
 }
 
 .project-card:nth-child(3) {
-  background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+  background: var(--primary-red);
 }
 
 .project-card:nth-child(4) {
-  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+  background: var(--primary-red);
 }
 
 .project-header {
