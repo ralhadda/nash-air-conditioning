@@ -89,6 +89,30 @@ body {
   transform: scale(1.05);
 }
 
+/* Back Button Styling */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 300ms ease;
+}
+
+.back-button:hover {
+  color: var(--primary-red);
+  background-color: rgba(230, 57, 70, 0.1);
+  transform: translateX(-3px);
+}
+
+.back-button i {
+  font-size: 1.2rem;
+}
+
 .nav-phone-number {
   display: flex;
   align-items: center;
