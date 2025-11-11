@@ -147,7 +147,28 @@
     </footer>
     <script src="mobile-nav.js"></script>
     <script src="contact-animation.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="quote-form.js"></script>
+      <!-- EmailJS Script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+window.onload = function () {
+  emailjs.init("0Iz1sSvHShdGxPAag");
+
+  document.getElementById('quoteForm').addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_ql6lz9g", "template_8ug5qar", this)
+      .then(function () {
+        alert("Message sent successfully! We'll get back to you within 24 hours.");
+        e.target.reset();
+      }, function (error) {
+        alert("Failed to send message. Please try again or email directly.");
+        console.error("EmailJS error:", error);
+      });
+  });
+};
+
+  </script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="quote-form.js"></script> -->
   </body>
 </html>
